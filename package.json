@@ -1,0 +1,32 @@
+{
+  "name": "alto.js",
+  "version": "1.0.0",
+  "description": "Utilities for accessing ALTO XML documents",
+  "type": "module",
+  "exports": "./index.js",
+  "imports": {
+    "alto.js": "./index.js"
+  },
+  "scripts": {
+    "debug": "node inspect --import ./test/setup.js --test \"test/**/*.test.js\"",
+    "test": "node --import ./test/setup.js --test \"test/**/*.test.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inukshuk/alto.js.git"
+  },
+  "keywords": [
+    "alto",
+    "alto-xml",
+    "ocr"
+  ],
+  "author": "",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/inukshuk/alto.js/issues"
+  },
+  "homepage": "https://github.com/inukshuk/alto.js#readme",
+  "devDependencies": {
+    "jsdom": "^24.1.0"
+  }
+}
