@@ -55,4 +55,10 @@ describe('Document', () => {
       })
     })
   })
+
+  describe('toString', () => {
+    it('returns serialized xml string', () => {
+      assert.match(tr.toString(), /^<alto/)
+    })
+  })
 })
