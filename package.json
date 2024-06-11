@@ -8,8 +8,9 @@
     "alto.js": "./index.js"
   },
   "scripts": {
-    "debug": "node inspect --import ./test/setup.js --test \"test/**/*.test.js\"",
-    "test": "node --import ./test/setup.js --test \"test/**/*.test.js\""
+    "debug": "node inspect --import ./test/setup.js --test",
+    "test": "node --import ./test/setup.js --test --experimental-test-coverage",
+    "watch": "node --import ./test/setup.js --test --watch"
   },
   "repository": {
     "type": "git",
