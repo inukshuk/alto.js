@@ -31,7 +31,7 @@ describe('Document', () => {
     })
 
     it('has variable scale when using ', () => {
-      let { page } = loc
+      let page = loc.get('Page')
 
       let W = page.getAttribute('WIDTH')
       let H = page.getAttribute('HEIGHT')
@@ -44,7 +44,7 @@ describe('Document', () => {
         y: h / H
       })
 
-      page = tr.page
+      page = tr.get('Page')
       W = page.getAttribute('WIDTH')
       H = page.getAttribute('HEIGHT')
 
@@ -53,6 +53,12 @@ describe('Document', () => {
         x: w / W,
         y: h / H
       })
+    })
+  })
+
+  describe('toPlainText', () => {
+    it('converts the document to plain text', () => {
+      assert.match(loc.toPlainText(), /THE WINCHESTER NEWS/)
     })
   })
 
