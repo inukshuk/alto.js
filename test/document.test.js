@@ -60,6 +60,12 @@ describe('Document', () => {
     it('converts the document to plain text', () => {
       assert.match(loc.toPlainText(), /THE WINCHESTER NEWS/)
     })
+
+    it('supports selections', () => {
+      assert.equal(
+        loc.toPlainText({ x: 6750, y: 1840, width: 8000, height: 700 }),
+        'WINCHESTER NEWS')
+    })
   })
 
   describe('toString', () => {
