@@ -7,7 +7,7 @@ let { DOMParser, XMLSerializer } = new JSDOM().window
 configure(DOMParser, XMLSerializer)
 
 
-global.F = function F(name) {
+globalThis.F = function F(name) {
   return readFileSync(join(import.meta.dirname, `./fixtures/${name}`), {
     encoding: 'utf-8'
   })
