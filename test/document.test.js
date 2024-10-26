@@ -74,9 +74,9 @@ describe('Document', () => {
     })
   })
 
-  describe('blocks', () => {
+  describe('blocks/iterator', () => {
     it('returns text blocks linked to the document', () => {
-      let [block] = Array.from(tr.blocks())
+      let [block] = Array.from(tr)
 
       assert(block instanceof TextBlock, 'not a TextBlock')
       assert.equal(tr, block.root)
