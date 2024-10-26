@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { afterEach, before, describe, it } from 'node:test'
-import { Document } from 'alto.js'
+import { Document, TextBlock } from 'alto.js'
 
 describe('Document', () => {
   let loc, tr
@@ -71,6 +71,15 @@ describe('Document', () => {
   describe('toString', () => {
     it('returns serialized xml string', () => {
       assert.match(tr.toString(), /^<alto/)
+    })
+  })
+
+  describe('blocks', () => {
+    it('returns text blocks linked to the document', () => {
+      let [block] = Array.from(tr.blocks())
+
+      assert(block instanceof TextBlock, 'not a TextBlock')
+      assert.equal(tr, block.root)
     })
   })
 })
