@@ -79,7 +79,7 @@ describe('Document', () => {
       let [block] = Array.from(tr)
 
       assert(block instanceof TextBlock, 'not a TextBlock')
-      assert.equal(tr, block.root)
+      assert.equal(tr, block.document)
     })
   })
 })
