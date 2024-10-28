@@ -37,7 +37,7 @@ describe('Document', () => {
       let H = page.getAttribute('HEIGHT')
       let w = 256
       let h = 512
-      
+
       loc.setScale(w, h)
       assert.deepEqual(loc.scale, {
         x: w / W,
@@ -76,7 +76,7 @@ describe('Document', () => {
 
   describe('blocks/iterator', () => {
     it('returns text blocks linked to the document', () => {
-      let [block] = Array.from(tr)
+      let [block] = Array.from(tr.blocks())
 
       assert(block instanceof TextBlock, 'not a TextBlock')
       assert.equal(tr, block.document)
