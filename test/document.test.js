@@ -63,7 +63,7 @@ describe('Document', () => {
 
     it('supports selections', () => {
       assert.equal(
-        loc.toPlainText({ x: 6750, y: 1840, width: 8000, height: 700 }),
+        loc.toPlainText(loc.select({ x: 6750, y: 1840, width: 8000, height: 700 })),
         'WINCHESTER NEWS')
     })
   })
