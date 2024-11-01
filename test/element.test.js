@@ -26,4 +26,18 @@ describe('TextLine', () => {
       assert.equal(strings.at(-1), last)
     })
   })
+
+  describe('previous', () => {
+    it('returns previous line in the block', () => {
+      assert.equal(lines[0], lines[1].previous())
+      assert.equal(null, lines[0].previous())
+    })
+  })
+
+  describe('next', () => {
+    it('returns next line in the block', () => {
+      assert.equal(lines[1], lines[0].next())
+      assert.equal(null, lines.at(-1).next())
+    })
+  })
 })
