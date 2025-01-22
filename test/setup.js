@@ -1,6 +1,6 @@
 import { join } from 'node:path'
 import { readFileSync } from 'node:fs'
-import { configure } from 'alto'
+import { configure } from 'alto-xml'
 import { JSDOM } from 'jsdom'
 
 let { DOMParser, XMLSerializer } = new JSDOM().window

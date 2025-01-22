@@ -1,11 +1,11 @@
 {
-  "name": "alto",
+  "name": "alto-xml",
   "version": "1.0.0",
   "description": "Utilities for accessing ALTO XML documents",
   "type": "module",
   "exports": "./index.js",
   "imports": {
-    "alto": "./index.js"
+    "alto-xml": "./index.js"
   },
   "scripts": {
     "debug": "node inspect --import ./test/setup.js --test",

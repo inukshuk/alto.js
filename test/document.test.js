@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { afterEach, before, describe, it } from 'node:test'
-import { Document, TextBlock } from 'alto'
+import { Document, TextBlock } from 'alto-xml'
 
 describe('Document', () => {
   let loc, tr
