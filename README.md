@@ -9,6 +9,7 @@ Installation
 ------------------------------------------------------------------------------
 ```console
     $ npm install alto-xml
+```
 Usage
 ------------------------------------------------------------------------------
 In Node.js, please specify which XML parser to use.
