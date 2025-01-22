@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { before, describe, it } from 'node:test'
-import { Document, String } from 'alto.js'
+import { Document, String } from 'alto'
 
 describe('TextLine', () => {
   let lines

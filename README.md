@@ -1,7 +1,7 @@
 ALTO.js
 ==============================================================================
 ![Build Status](https://github.com/inukshuk/alto.js/actions/workflows/ci.yml/badge.svg?branch=main)
-[![NPM version](https://img.shields.io/npm/v/alto.js.svg)](https://www.npmjs.com/package/alto.js)
+[![NPM version](https://img.shields.io/npm/v/alto.svg)](https://www.npmjs.com/package/alto)
 
 JavaScript API to access ALTO XML documents.
 
