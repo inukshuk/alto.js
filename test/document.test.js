@@ -30,7 +30,7 @@ describe('Document', () => {
       assert.deepEqual(loc.scale, init)
     })
 
-    it('has variable scale when using ', () => {
+    it('has variable scale when using image dimensions', () => {
       let page = loc.get('Page')
 
       let W = page.getAttribute('WIDTH')
