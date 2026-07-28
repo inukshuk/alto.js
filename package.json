@@ -10,9 +10,6 @@
   "exports": {
     ".": "./index.js"
   },
-  "imports": {
-    "alto-xml": "./index.js"
-  },
   "scripts": {
     "debug": "node inspect --import ./test/setup.js --test",
     "lint": "eslint",
