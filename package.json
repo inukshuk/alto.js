@@ -5,7 +5,7 @@
   "type": "module",
   "files": [
     "index.js",
-    "src"
+    "lib"
   ],
   "exports": {
     ".": "./index.js"
