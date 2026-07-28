@@ -3,13 +3,19 @@
   "version": "1.0.1",
   "description": "Utilities for accessing ALTO XML documents",
   "type": "module",
-  "exports": "./index.js",
+  "files": [
+    "index.js",
+    "src"
+  ],
+  "exports": {
+    ".": "./index.js"
+  },
   "imports": {
     "alto-xml": "./index.js"
   },
   "scripts": {
     "debug": "node inspect --import ./test/setup.js --test",
-    "lint": "eslint *.js lib test",
+    "lint": "eslint",
     "pretest": "npm run lint",
     "test": "node --import ./test/setup.js --test --experimental-test-coverage",
     "watch": "node --import ./test/setup.js --test --watch"
@@ -33,9 +39,9 @@
   },
   "homepage": "https://github.com/inukshuk/alto.js#readme",
   "devDependencies": {
-    "@eslint/js": "^9.9.0",
-    "eslint": "^9.9.0",
-    "globals": "^15.9.0",
-    "jsdom": "^26.0.0"
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.8.0",
+    "globals": "^17.8.0",
+    "jsdom": "^30.0.0"
   }
 }
