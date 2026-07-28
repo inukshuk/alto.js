@@ -68,6 +68,29 @@ describe('Document', () => {
     })
   })
 
+  describe('select', () => {
+    let selected = (doc, ...args) =>
+      [...doc.select(...args)].filter(([, on]) => on).map(([s]) => s.CONTENT)
+
+    it('selects nothing without a rectangle', () => {
+      assert.deepEqual(selected(tr), [])
+    })
+
+    it('selects everything when true', () => {
+      let doc = Document.parse(F('hyphenated.xml'))
+      assert.deepEqual(
+        selected(doc, true),
+        ['An', 'exam', 'ple', 'line', 'unpositioned'])
+    })
+
+    it('excludes strings without bounds when given a rectangle', () => {
+      let doc = Document.parse(F('hyphenated.xml'))
+      assert.deepEqual(
+        selected(doc, { x: 0, y: 0, width: 200, height: 100 }),
+        ['An', 'exam', 'ple', 'line'])
+    })
+  })
+
   describe('toString', () => {
     it('returns serialized xml string', () => {
       assert.match(tr.toString(), /^<alto/)

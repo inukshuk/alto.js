@@ -16,6 +16,12 @@ describe('TextLine', () => {
       assert(first instanceof String)
       assert.equal(strings[0], first)
     })
+
+    it('skips leading shape elements', () => {
+      let line = [...Document.parse(F('hyphenated.xml')).lines()][0]
+      assert.equal('Shape', line.node.firstElementChild.nodeName)
+      assert.equal('An', line.first()?.CONTENT)
+    })
   })
 
   describe('last', () => {
@@ -24,6 +30,12 @@ describe('TextLine', () => {
       let last = lines[1].last()
       assert(last instanceof String)
       assert.equal(strings.at(-1), last)
+    })
+
+    it('skips trailing hyphenation characters', () => {
+      let line = [...Document.parse(F('hyphenated.xml')).lines()][0]
+      assert.equal('HYP', line.node.lastElementChild.nodeName)
+      assert.equal('exam', line.last()?.CONTENT)
     })
   })
 

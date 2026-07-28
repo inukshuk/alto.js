@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alto xmlns="http://www.loc.gov/standards/alto/ns-v4#" SCHEMAVERSION="4.4">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+  </Description>
+  <Layout>
+    <Page ID="PAGE1" PHYSICAL_IMG_NR="1" WIDTH="200" HEIGHT="100">
+      <PrintSpace HPOS="0" VPOS="0" WIDTH="200" HEIGHT="100">
+        <TextBlock ID="BLOCK1" HPOS="0" VPOS="0" WIDTH="200" HEIGHT="100">
+          <TextLine ID="LINE1" HPOS="0" VPOS="0" WIDTH="200" HEIGHT="20">
+            <Shape>
+              <Polygon POINTS="0,0 200,0 200,20 0,20"/>
+            </Shape>
+            <String ID="S1" CONTENT="An" HPOS="0" VPOS="0" WIDTH="20" HEIGHT="20"/>
+            <SP WIDTH="5" HPOS="20" VPOS="0"/>
+            <String ID="S2" CONTENT="exam" HPOS="25" VPOS="0" WIDTH="40" HEIGHT="20"
+              SUBS_TYPE="HypPart1" SUBS_CONTENT="example"/>
+            <HYP CONTENT="-" HPOS="65" VPOS="0" WIDTH="5"/>
+          </TextLine>
+          <TextLine ID="LINE2" HPOS="0" VPOS="20" WIDTH="200" HEIGHT="20">
+            <String ID="S3" CONTENT="ple" HPOS="0" VPOS="20" WIDTH="30" HEIGHT="20"
+              SUBS_TYPE="HypPart2" SUBS_CONTENT="example"/>
+            <SP WIDTH="5" HPOS="30" VPOS="20"/>
+            <String ID="S4" CONTENT="line" HPOS="35" VPOS="20" WIDTH="30" HEIGHT="20"/>
+          </TextLine>
+          <TextLine ID="LINE3" HPOS="0" VPOS="40" WIDTH="200" HEIGHT="20">
+            <String ID="S5" CONTENT="unpositioned"/>
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>
