@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alto xmlns="http://www.loc.gov/standards/alto/ns-v4#" SCHEMAVERSION="4.4">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+  </Description>
+  <Layout>
+    <Page ID="PAGE1" PHYSICAL_IMG_NR="1" WIDTH="100" HEIGHT="100">
+      <TopMargin ID="TOP" HPOS="0" VPOS="0" WIDTH="100" HEIGHT="10">
+        <TextBlock ID="TB_TOP" HPOS="0" VPOS="0" WIDTH="100" HEIGHT="10">
+          <TextLine ID="TL_TOP" HPOS="0" VPOS="0" WIDTH="100" HEIGHT="10">
+            <String ID="S_TOP" CONTENT="header" HPOS="0" VPOS="0" WIDTH="50" HEIGHT="10"/>
+          </TextLine>
+        </TextBlock>
+      </TopMargin>
+      <LeftMargin ID="LEFT" HPOS="0" VPOS="10" WIDTH="10" HEIGHT="80">
+        <TextBlock ID="TB_LEFT" HPOS="0" VPOS="10" WIDTH="10" HEIGHT="80">
+          <TextLine ID="TL_LEFT" HPOS="0" VPOS="10" WIDTH="10" HEIGHT="80">
+            <String ID="S_LEFT" CONTENT="left" HPOS="0" VPOS="10" WIDTH="10" HEIGHT="80"/>
+          </TextLine>
+        </TextBlock>
+      </LeftMargin>
+      <RightMargin ID="RIGHT" HPOS="90" VPOS="10" WIDTH="10" HEIGHT="80">
+        <TextBlock ID="TB_RIGHT" HPOS="90" VPOS="10" WIDTH="10" HEIGHT="80">
+          <TextLine ID="TL_RIGHT" HPOS="90" VPOS="10" WIDTH="10" HEIGHT="80">
+            <String ID="S_RIGHT" CONTENT="right" HPOS="90" VPOS="10" WIDTH="10" HEIGHT="80"/>
+          </TextLine>
+        </TextBlock>
+      </RightMargin>
+      <BottomMargin ID="BOTTOM" HPOS="0" VPOS="90" WIDTH="100" HEIGHT="10">
+        <TextBlock ID="TB_BOTTOM" HPOS="0" VPOS="90" WIDTH="100" HEIGHT="10">
+          <TextLine ID="TL_BOTTOM" HPOS="0" VPOS="90" WIDTH="100" HEIGHT="10">
+            <String ID="S_BOTTOM" CONTENT="footer" HPOS="0" VPOS="90" WIDTH="50" HEIGHT="10"/>
+          </TextLine>
+        </TextBlock>
+      </BottomMargin>
+      <PrintSpace ID="PRINT" HPOS="10" VPOS="10" WIDTH="80" HEIGHT="80">
+        <TextBlock ID="TB_BODY" HPOS="10" VPOS="10" WIDTH="80" HEIGHT="80">
+          <TextLine ID="TL_BODY" HPOS="10" VPOS="10" WIDTH="80" HEIGHT="10">
+            <String ID="S_BODY1" CONTENT="body" HPOS="10" VPOS="10" WIDTH="30" HEIGHT="10"/>
+            <SP WIDTH="5" HPOS="40" VPOS="10"/>
+            <String ID="S_BODY2" CONTENT="text" HPOS="45" VPOS="10" WIDTH="30" HEIGHT="10"/>
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>
