@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alto xmlns="http://www.loc.gov/standards/alto/ns-v4#" SCHEMAVERSION="4.4">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+  </Description>
+  <Layout>
+    <Page ID="PAGE1" PHYSICAL_IMG_NR="1" WIDTH="100" HEIGHT="100">
+      <PrintSpace ID="PRINT" HPOS="0" VPOS="0" WIDTH="100" HEIGHT="100">
+        <TextBlock ID="TB_PLAIN" HPOS="0" VPOS="0" WIDTH="100" HEIGHT="10">
+          <TextLine ID="TL_PLAIN" HPOS="0" VPOS="0" WIDTH="100" HEIGHT="10">
+            <String ID="S_PLAIN" CONTENT="plain" HPOS="0" VPOS="0" WIDTH="50" HEIGHT="10"/>
+          </TextLine>
+        </TextBlock>
+        <ComposedBlock ID="CB" TYPE="table" HPOS="0" VPOS="10" WIDTH="100" HEIGHT="80">
+          <TextBlock ID="TB_CELL" HPOS="0" VPOS="10" WIDTH="100" HEIGHT="10">
+            <TextLine ID="TL_CELL" HPOS="0" VPOS="10" WIDTH="100" HEIGHT="10">
+              <String ID="S_CELL" CONTENT="cell" HPOS="0" VPOS="10" WIDTH="50" HEIGHT="10"/>
+            </TextLine>
+          </TextBlock>
+          <Illustration ID="ILL" HPOS="0" VPOS="20" WIDTH="100" HEIGHT="10"/>
+          <ComposedBlock ID="CB_NESTED" HPOS="0" VPOS="30" WIDTH="100" HEIGHT="10">
+            <TextBlock ID="TB_NESTED" HPOS="0" VPOS="30" WIDTH="100" HEIGHT="10">
+              <TextLine ID="TL_NESTED" HPOS="0" VPOS="30" WIDTH="100" HEIGHT="10">
+                <String ID="S_NESTED" CONTENT="nested" HPOS="0" VPOS="30" WIDTH="50" HEIGHT="10"/>
+              </TextLine>
+            </TextBlock>
+          </ComposedBlock>
+        </ComposedBlock>
+        <TextBlock ID="TB_LAST" HPOS="0" VPOS="90" WIDTH="100" HEIGHT="10">
+          <TextLine ID="TL_LAST" HPOS="0" VPOS="90" WIDTH="100" HEIGHT="10">
+            <String ID="S_LAST" CONTENT="last" HPOS="0" VPOS="90" WIDTH="50" HEIGHT="10"/>
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

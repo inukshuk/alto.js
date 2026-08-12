@@ -168,5 +168,37 @@ describe('Document', () => {
       assert(block instanceof TextBlock, 'not a TextBlock')
       assert.equal(tr, block.document)
     })
+
+    it('includes text blocks nested in composed blocks', () => {
+      let doc = Document.parse(F('composed.xml'))
+
+      assert.deepEqual(
+        [...doc.blocks()].map(b => b.attr('ID')),
+        ['TB_PLAIN', 'TB_CELL', 'TB_NESTED', 'TB_LAST'])
+
+      assert.deepEqual(
+        [...doc.strings()].map(s => s.CONTENT),
+        ['plain', 'cell', 'nested', 'last'])
+    })
+
+    it('matches element names in any namespace', () => {
+      let doc = Document.parse(`<?xml version="1.0"?>
+        <a:alto xmlns:a="http://www.loc.gov/standards/alto/ns-v4#">
+          <a:Layout><a:Page ID="P" WIDTH="10" HEIGHT="10">
+            <a:PrintSpace><a:TextBlock ID="TB"><a:TextLine ID="TL">
+              <a:String CONTENT="prefixed"/>
+              <a:String CONTENT="line"/>
+            </a:TextLine></a:TextBlock></a:PrintSpace>
+          </a:Page></a:Layout>
+        </a:alto>`)
+
+      assert.deepEqual([...doc.blocks()].map(b => b.attr('ID')), ['TB'])
+      assert.deepEqual([...doc.lines()].map(l => l.attr('ID')), ['TL'])
+      assert.deepEqual([...doc.strings()].map(s => s.CONTENT), ['prefixed', 'line'])
+
+      let [line] = doc.lines()
+      assert.equal(line.first().CONTENT, 'prefixed')
+      assert.equal(line.last().CONTENT, 'line')
+    })
   })
 })
