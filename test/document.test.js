@@ -132,6 +132,49 @@ describe('Document', () => {
     })
   })
 
+  describe('getStringAt', () => {
+    let doc, strings
+
+    before(() => {
+      doc = Document.parse(F('margins.xml'))
+      strings = [...doc.strings()]
+    })
+
+    it('returns the same strings as the iterator', () => {
+      assert.deepEqual(
+        strings.map((_, idx) => doc.getStringAt(idx)),
+        strings)
+    })
+
+    it('follows the given reading order, not document order', () => {
+      assert.equal(doc.getStringAt(1).CONTENT, 'body')
+      assert.equal(doc.getStringAt(3).CONTENT, 'left')
+
+      assert.deepEqual(
+        strings.map((_, idx) => doc.getStringAt(idx).CONTENT),
+        ['header', 'body', 'text', 'left', 'right', 'footer'])
+
+      assert.equal(doc.getStringAt(0, ['BottomMargin', 'TopMargin']).CONTENT, 'footer')
+      assert.equal(doc.getStringAt(1, ['BottomMargin', 'TopMargin']).CONTENT, 'header')
+    })
+
+    it('returns nothing when the index is out of range', () => {
+      assert.equal(doc.getStringAt(strings.length), null)
+      assert.equal(doc.getStringAt(-1), null)
+      assert.equal(doc.getStringAt(), null)
+
+      assert.equal(doc.getStringAt(2, ['BottomMargin', 'TopMargin']), null)
+    })
+
+    it('includes strings nested in composed blocks', () => {
+      let composed = Document.parse(F('composed.xml'))
+
+      assert.deepEqual(
+        [...composed.strings()].map((_, idx) => composed.getStringAt(idx).CONTENT),
+        ['plain', 'cell', 'nested', 'last'])
+    })
+  })
+
   describe('select', () => {
     let selected = (doc, ...args) =>
       [...doc.select(...args)].filter(([, on]) => on).map(([s]) => s.CONTENT)
